@@ -1,8 +1,9 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
+    <div class="container">
     <h1>Formulaire de contact</h1>
-    <form id="contact-form" method="post" action="{{ path('mail') }}" role="form">
+    <form id="contact-form" method="post" action="{{ path('send_mail') }}" role="form">
 
 
         <div class="messages"></div>
@@ -54,7 +55,7 @@
                         <div class="help-block with-errors"></div>
                     </div>
                 </div>
-                <div class="col-md-12">
+                <div class="col-md-12 mt-4">
                     <input type="submit" class="btn btn-success btn-send" value="Envoyer">
                 </div>
             </div>
@@ -67,4 +68,5 @@
         </div>
 
     </form>
+    </div>
 {% endblock %}
